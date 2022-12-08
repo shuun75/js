@@ -3,9 +3,10 @@ $(document).ready(function() {
   $("#start").click(function() {
     let timerId = setInterval(function() {
       count++
-      second = count % 60
-      minute = (Math.floor(count % 3600 / 60))
-      hour = (Math.floor(count / 3600))
+      milli = count % 10
+      second = (Math.floor(count / 10  % 60))
+      minute = (Math.floor(count / 10 % 3600 / 60))
+      hour = (Math.floor(count / 10 / 3600))
       
       // タイマー停止
       $("#stop").click(function() {
@@ -16,13 +17,14 @@ $(document).ready(function() {
       $("#reset").click(function() {
         clearInterval(timerId);
         count = null;
-        $("#second, #minute, #hour").text(0);
+        $("#milli, #second, #minute, #hour").text(0);
       });
       
+      $("#milli").text(milli);
       $("#second").text(second);
       $("#minute").text(minute);
       $("#hour").text(hour);
-    }, 1000);
+    }, 100);
   });
   // ボタンの活性・非活性
   $("#stop, #reset").prop("disabled", true);
