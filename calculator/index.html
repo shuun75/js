@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="main.css">
+  <title>電卓</title>
+</head>
+<body>
+  <div class="calculator">
+    <input class="display" readonly id="result" type="text" value="0">
+    <button onclick="num_click(this.innerHTML)">7</button>
+    <button onclick="num_click(this.innerHTML)">8</button>
+    <button onclick="num_click(this.innerHTML)">9</button>
+    <button onclick="ope_click(this.innerHTML)">+</button>
+    <button onclick="num_click(this.innerHTML)">4</button>
+    <button onclick="num_click(this.innerHTML)">5</button>
+    <button onclick="num_click(this.innerHTML)">6</button>
+    <button onclick="ope_click(this.innerHTML)">-</button>
+    <button onclick="num_click(this.innerHTML)">1</button>
+    <button onclick="num_click(this.innerHTML)">2</button>
+    <button onclick="num_click(this.innerHTML)">3</button>
+    <button onclick="ope_click(this.innerHTML)">*</button>
+    <button onclick="num_click(this.innerHTML)">0</button>
+    <button onclick="num_click(this.innerHTML)">00</button>
+    <button onclick="ope_click(this.innerHTML)">.</button>
+    <button onclick="ope_click(this.innerHTML)">/</button>
+    <button onclick="AC_click()">AC</button>
+    <button onclick="equal_click()">=</button>
+  </div>
+  <script src="main.js"></script>
+</body>
+</html>
